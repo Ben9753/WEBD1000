@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Amazing Website</title>
+</head>
+<body>Read the fine print
+    <h1>Terms and conditions apply</h1>
+</body>Welcome to my webpage enjoy the purple 
+</html> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Amazing Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <h1>Terms and conditions apply</h1>
+</body>yea.. theres not much else here..
+</html>
+
+<!-- Add this inside the <body> of your HTML file -->
+<button onclick="alert('why would you click this')">Click Me</button>
+<a href="https://open.spotify.com/artist/1840uCEe03GUXfU7xGYMG8">Shameless Self Promo </a> 
+
