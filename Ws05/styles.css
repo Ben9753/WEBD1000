@@ -1,5 +1,12 @@
+:root {
+    --bg: #ff0000;
+    --surface: #703595;
+    --text: #1f1f1f;
+    --button-radius: 6px;
+}
+
 html {
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 body {
@@ -8,7 +15,8 @@ body {
 
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* keep logo and nav on the same line */
+    align-items: center;
     align-self: stretch;
     gap: 32px;
     padding-left: 32px;
@@ -50,13 +58,36 @@ header {
 
 }
 .nav-container {
-    display: inline-block;
-    margin-left: auto;
-    align-items: flex-end;
+    display: flex; /* row of nav items */
+    gap: 0.35rem;
+    align-items: center;
 }
  
 .nav-container ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+/* Header layout helpers for the logo & nav */
+.header-container { display: flex; align-items: center; gap: 16px; justify-content: space-between; width: 100%; }
+.logo-container { order: 1; }
+.nav-container { order: 2; margin-left: auto; }
+
+/* Resize CORAH logo & wordmark */
+.corah-brand-logo { max-width: 64px; height: auto; display: inline-block; }
+.corah-brand-wordmark-logo { max-width: 200px; height: auto; display: inline-block; margin-left: 8px; }
+
+/* Tighter nav buttons for a neat compact look */
+.nav-list { display: flex; gap: 0.35rem; align-items: center; }
+.nav-button { margin: 0; }
+.nav-link { padding: 0.35rem 0.65rem; }
+
+/* Responsive: stack header contents and make nav vertical on small screens */
+@media (max-width: 640px) {
+    .header-container { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .nav-list { flex-direction: column; align-items: stretch; width: 100%; gap: 8px; }
+    .nav-button { width: 100%; }
+    .nav-link { display: block; width: 100%; text-align: left; }
+    .nav-container { margin-left: 0; }
 }
