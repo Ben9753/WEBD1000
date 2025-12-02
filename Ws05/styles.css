@@ -1,6 +1,7 @@
 :root {
     --bg: #ff0000;
     --surface: #703595;
+    --surface-hover: #8f59bd; /* lighter purple for hover */
     --text: #1f1f1f;
     --button-radius: 6px;
 }
@@ -25,6 +26,12 @@ header {
     padding-bottom: 8px;
 }
 
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .separator {
     border-style: solid;
     border-top: 2px;
@@ -47,7 +54,7 @@ header {
 .nav-link {
     display: inline-block;
     text-decoration: none;
-    color: var(--text);
+    color: #ffffff; /* white text for button contrast on purple */
     background-color: var(--surface);
     padding: 0.45rem 0.9rem;
     border-radius: var(--button-radius);
@@ -56,6 +63,48 @@ header {
     letter-spacing: 0.02em;
     transition: transform 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
 
+}
+
+/* Hover & focus state for nav links — light purple background */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    background-color: var(--surface-hover);
+    color: #ffffff; /* make text white while hovered */
+    transform: translateY(-1px);
+}
+
+/* Hero Section — centered hero text */
+.hero {
+        min-height: calc(100vh - 160px); /* make it near full viewport height */
+        display: flex;
+        align-items: center; /* vertical centering */
+        justify-content: center; /* horizontal centering */
+        text-align: center; /* center text */
+        padding: 3rem 1rem; /* comfortable spacing */
+}
+.hero-inner { max-width: 960px; width: 100%; margin: 0 auto; }
+.hero-copy h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); margin-bottom: 0.75rem; }
+.hero-copy p { font-size: clamp(1rem, 2.2vw, 1.125rem); margin-bottom: 1.1rem; color: #222; }
+.hero-copy .btn { display: inline-block; background: var(--surface); color: #fff; padding: 0.6rem 1rem; border-radius: 6px; text-decoration: none; border: none; }
+.hero-copy .btn:hover { background: var(--surface-hover); transform: translateY(-1px); }
+
+@media (max-width: 640px) {
+    .hero { min-height: 50vh; padding: 2rem 1rem; }
+    .hero-copy h1 { font-size: 1.6rem; }
+}
+
+/* Focus-visible for keyboard users (accessibility) */
+.nav-link:focus-visible {
+    outline: 3px solid rgba(143, 9, 170, 0.2);
+    outline-offset: 2px;
+}
+
+/* Secondary links can have a slightly different hover color if used */
+.nav-link--secondary:hover,
+.nav-link--secondary:focus {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #703595;
 }
 .nav-container {
     display: flex; /* row of nav items */
@@ -91,3 +140,5 @@ header {
     .nav-link { display: block; width: 100%; text-align: left; }
     .nav-container { margin-left: 0; }
 }
+
+
