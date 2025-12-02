@@ -1,26 +1,54 @@
-:root {
-    --bg: #1f1f1f; /* dark gray background */
-    --surface: #703595; /* slightly lighter surface for controls */
-    --text: #f5f5f5; /* main text color */
-    --accent: #703595; /* primary button color (blue) */
-    --accent-2: #703595; /* secondary button color (orange) */
-    --button-radius: 6px;
-}
-
 html {
-    background-color: black;
+    background-color:rgb(255, 255, 255);
 }
 
-.header-container {
+body {
+    background-color:rgb(255, 255, 255);
+}
+
+header {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+    padding-bottom: 8px;
 }
- 
-.logo-container {
+
+.separator {
+    border-style: solid;
+    border-top: 2px;
+    border-color: #7b458f;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.nav-container ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.nav-link {
     display: inline-block;
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--surface);
+    padding: 0.45rem 0.9rem;
+    border-radius: var(--button-radius);
+    border: 1px solid rgba(143, 9, 170, 0.377);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: transform 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
+
 }
- 
 .nav-container {
     display: inline-block;
     margin-left: auto;
@@ -31,29 +59,4 @@ html {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-.nav-button {
-  background-color: #000000;
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 12px 8px;
-}
-
-.nav-link {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--text);
-    background-color: var(--surface);
-    padding: 0.45rem 0.9rem;
-    border-radius: var(--button-radius);
-    border: 1px solid rgba(255,255,255,0.06);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    transition: transform 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
 }

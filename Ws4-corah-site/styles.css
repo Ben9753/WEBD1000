@@ -8,7 +8,7 @@
 }
 
 html {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .header-container {
@@ -16,10 +16,12 @@ html {
     align-items: center;
     flex-wrap: wrap;
 }
- 
-.logo-container {
-    display: inline-block;
+.separator {
+    border-style: solid;
+    border-top: 2px;
+    border-color: #841687;
 }
+ 
  
 .nav-container {
     display: inline-block;
@@ -34,9 +36,9 @@ html {
 }
 
 .nav-button {
-  background-color: #000000;
+  background-color: #ffffff;
   border: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 20px;
   text-align: center;
   text-decoration: none;
@@ -52,10 +54,38 @@ html {
     background-color: var(--surface);
     padding: 0.45rem 0.9rem;
     border-radius: var(--button-radius);
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     font-weight: 600;
     letter-spacing: 0.02em;
     transition: transform 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
+
 }
 
+a:link {
+  background-color: rgb(200, 78, 222);
+}
 
+a:visited {
+  background-color: rgb(60, 110, 70);
+}
+
+a:hover {
+  background-color: rgb(143, 8, 98);
+}
+
+a:active {
+  background-color: rgb(134, 239, 136);
+} 
+
+.divider {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.divider::before, .divider::after {
+  flex: 1;
+  content: '';
+  padding: 3px;
+  background-color: rgb(136, 0, 95);
+    margin: 5px;}
